@@ -1,0 +1,60 @@
+---
+import { COMPANY_INFO } from '../data/projects';
+---
+
+<footer class="border-t border-[var(--border-subtle)] bg-[var(--bg-canvas)] py-12 text-xs text-[var(--text-tertiary)] transition-colors" aria-label="Site Footer">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-3">
+          <div class="flex h-9 items-center justify-center rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-2 py-1">
+            <picture>
+              <source srcset="/logo-dark.png" media="(prefers-color-scheme: dark)" />
+              <img
+                src="/logo-light.png"
+                alt="5GOOS Logo"
+                width="60"
+                height="28"
+                class="h-6 w-auto object-contain"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+          <span class="font-bold text-[var(--text-primary)] text-sm tracking-tight">5GOOS</span>
+          <span class="font-mono text-[10px] text-purple-400 font-semibold">// GOOSS</span>
+        </div>
+        <p class="max-w-md text-xs text-[var(--text-secondary)]">
+          Global Observability &amp; Operations Software Solutions (GOOSS). Open-source cloud tooling.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-mono text-xs text-[var(--text-secondary)]">
+        <a href="#projects" class="hover:text-[var(--text-primary)] transition-colors">Projects</a>
+        <a href="#about" class="hover:text-[var(--text-primary)] transition-colors">About</a>
+        <a href="#contact" class="hover:text-[var(--text-primary)] transition-colors">Contact</a>
+        <a href="https://botoview.5goos.com" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-400 transition-colors">
+          BotoView ↗
+        </a>
+        <a href={COMPANY_INFO.github} target="_blank" rel="noopener noreferrer" class="hover:text-[var(--text-primary)] transition-colors">
+          GitHub ↗
+        </a>
+        <a href="/llms.txt" target="_blank" class="hover:text-purple-400 transition-colors">
+          llms.txt
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-8 border-t border-[var(--border-subtle)] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-[11px]">
+      <div>
+        © 2026 5GOOS — Global Observability &amp; Operations Software Solutions (GOOSS). All rights reserved.
+      </div>
+
+      <div>
+        <a href="#navbar" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
+          Back to Top ↑
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

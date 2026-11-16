@@ -1,0 +1,210 @@
+---
+import { COMPANY_INFO } from '../data/projects';
+---
+
+<section class="relative isolate overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28" aria-labelledby="hero-title">
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-grid-pattern opacity-70"></div>
+  <div class="pointer-events-none absolute top-1/3 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] sm:h-[650px] sm:w-[650px] rounded-full bg-radial from-purple-500/10 via-cyan-500/6 to-transparent blur-3xl"></div>
+
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-center text-center">
+      
+      <h1
+        id="hero-title"
+        class="max-w-4xl text-balance text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-6xl sm:leading-[1.15]"
+      >
+        Global Observability &amp; Operations Software Solutions <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent font-mono font-bold">(GOOSS)</span> for Modern Infrastructure
+      </h1>
+
+      <p class="mt-6 max-w-2xl text-balance text-base text-[var(--text-secondary)] sm:text-lg sm:leading-relaxed">
+        5GOOS builds focused open-source tooling for modern cloud operations.
+      </p>
+
+      <div
+        id="anim-stage"
+        class="mt-10 w-full max-w-md rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-5 sm:p-7 backdrop-blur-xl shadow-xl relative overflow-hidden select-none transition-all duration-300 hover:border-[var(--border-hover)]"
+      >
+        <div class="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 h-32 w-32 rounded-full bg-cyan-500/10 blur-2xl"></div>
+
+        <div class="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]">
+          <div class="inline-flex rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] p-1 text-xs font-mono">
+            <button
+              type="button"
+              id="tab-5goos"
+              class="rounded-md px-3 py-1 font-semibold transition-all duration-200 bg-[var(--bg-surface)] text-purple-600 dark:text-purple-400 shadow-sm"
+              aria-label="View 5GOOS brand identity"
+            >
+              5GOOS
+            </button>
+            <button
+              type="button"
+              id="tab-gooss"
+              class="rounded-md px-3 py-1 font-medium transition-all duration-200 text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
+              aria-label="View GOOSS acronym identity"
+            >
+              GOOSS
+            </button>
+          </div>
+
+          <button
+            type="button"
+            id="anim-toggle-btn"
+            class="text-[11px] font-mono text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5 px-2 py-1 rounded bg-[var(--bg-canvas)] border border-[var(--border-subtle)]"
+            title="Toggle state"
+          >
+            <span>transform</span>
+            <span class="text-cyan-500">⇄</span>
+          </button>
+        </div>
+
+        <div class="py-8 sm:py-10 flex flex-col items-center justify-center">
+          <div
+            id="wordmark-box"
+            class="relative w-[5ch] h-[1.3em] font-mono font-black text-5xl sm:text-6xl md:text-7xl leading-none tracking-normal select-none overflow-visible"
+          >
+            <div
+              id="traveler-slot"
+              class="absolute top-0 left-0 w-[1ch] h-full flex items-center justify-center transition-transform duration-400 ease-out transform-gpu will-change-transform z-10"
+            >
+              <span
+                id="traveler-char"
+                class="inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+              >
+                5
+              </span>
+            </div>
+
+            <div
+              id="core-goos"
+              class="absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-[var(--text-primary)]"
+            >
+              GOOS
+            </div>
+          </div>
+
+          <div class="mt-6 h-5 flex items-center justify-center">
+            <span
+              id="identity-label"
+              class="font-mono text-xs font-medium text-[var(--text-secondary)] transition-opacity duration-200"
+            >
+              Brand Identity
+            </span>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400 w-full opacity-60"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  const tab5goos = document.getElementById('tab-5goos');
+  const tabGooss = document.getElementById('tab-gooss');
+  const toggleBtn = document.getElementById('anim-toggle-btn');
+  const travelerSlot = document.getElementById('traveler-slot');
+  const travelerChar = document.getElementById('traveler-char');
+  const coreGoos = document.getElementById('core-goos');
+  const identityLabel = document.getElementById('identity-label');
+
+  let isGoossState = false;
+  let autoCycleTimer: NodeJS.Timeout | null = null;
+
+  function applyState(toGooss: boolean) {
+    isGoossState = toGooss;
+    if (!travelerSlot || !travelerChar || !coreGoos) return;
+
+    if (toGooss) {
+      travelerSlot.style.transform = 'translate3d(4ch, 0, 0)';
+      coreGoos.style.transform = 'translate3d(-1ch, 0, 0)';
+
+      setTimeout(() => {
+        travelerChar.style.transform = 'rotateY(90deg)';
+        travelerChar.style.opacity = '0.3';
+
+        setTimeout(() => {
+          travelerChar.textContent = 'S';
+          travelerChar.className =
+            'inline-flex items-center justify-center transition-all duration-200 text-cyan-600 dark:text-cyan-300 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] font-black';
+          travelerChar.style.transform = 'rotateY(0deg)';
+          travelerChar.style.opacity = '1';
+
+          coreGoos.className =
+            'absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-cyan-600 dark:text-cyan-300 drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]';
+        }, 80);
+      }, 180);
+
+      tabGooss?.classList.add('bg-[var(--bg-surface)]', 'text-cyan-600', 'dark:text-cyan-400', 'shadow-sm');
+      tabGooss?.classList.remove('text-[var(--text-tertiary)]');
+      tab5goos?.classList.remove('bg-[var(--bg-surface)]', 'text-purple-600', 'dark:text-purple-400', 'shadow-sm');
+      tab5goos?.classList.add('text-[var(--text-tertiary)]');
+
+      if (identityLabel) {
+        identityLabel.style.opacity = '0';
+        setTimeout(() => {
+          identityLabel.textContent = 'Global Observability & Operations Software Solutions';
+          identityLabel.style.opacity = '1';
+        }, 100);
+      }
+    } else {
+      travelerSlot.style.transform = 'translate3d(0, 0, 0)';
+      coreGoos.style.transform = 'translate3d(0, 0, 0)';
+
+      setTimeout(() => {
+        travelerChar.style.transform = 'rotateY(90deg)';
+        travelerChar.style.opacity = '0.3';
+
+        setTimeout(() => {
+          travelerChar.textContent = '5';
+          travelerChar.className =
+            'inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]';
+          travelerChar.style.transform = 'rotateY(0deg)';
+          travelerChar.style.opacity = '1';
+
+          coreGoos.className =
+            'absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-[var(--text-primary)]';
+        }, 80);
+      }, 180);
+
+      tab5goos?.classList.add('bg-[var(--bg-surface)]', 'text-purple-600', 'dark:text-purple-400', 'shadow-sm');
+      tab5goos?.classList.remove('text-[var(--text-tertiary)]');
+      tabGooss?.classList.remove('bg-[var(--bg-surface)]', 'text-cyan-600', 'dark:text-cyan-400', 'shadow-sm');
+      tabGooss?.classList.add('text-[var(--text-tertiary)]');
+
+      if (identityLabel) {
+        identityLabel.style.opacity = '0';
+        setTimeout(() => {
+          identityLabel.textContent = 'Brand Identity';
+          identityLabel.style.opacity = '1';
+        }, 100);
+      }
+    }
+  }
+
+  function startCycle() {
+    if (autoCycleTimer) clearInterval(autoCycleTimer);
+    autoCycleTimer = setInterval(() => {
+      applyState(!isGoossState);
+    }, 2800);
+  }
+
+  tab5goos?.addEventListener('click', () => {
+    applyState(false);
+    startCycle();
+  });
+
+  tabGooss?.addEventListener('click', () => {
+    applyState(true);
+    startCycle();
+  });
+
+  toggleBtn?.addEventListener('click', () => {
+    applyState(!isGoossState);
+    startCycle();
+  });
+
+  setTimeout(() => {
+    startCycle();
+  }, 800);
+</script>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <!-- Background obsidian canvas -->
+  <rect width="1200" height="630" fill="#09090B"/>
+  
+  <defs>
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#27272A" stroke-width="0.75" stroke-opacity="0.4"/>
+    </pattern>
+
+    <!-- Radial ambient glows -->
+    <radialGradient id="glow-purple" cx="0.15" cy="0.2" r="0.6">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#09090B" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-cyan" cx="0.85" cy="0.7" r="0.6">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#09090B" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Brand Logo Gradients -->
+    <linearGradient id="logo-slash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#6366F1"/>
+    </linearGradient>
+    <linearGradient id="logo-clover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D946EF"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="brand-text" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Gradients -->
+  <rect width="1200" height="630" fill="url(#glow-purple)"/>
+  <rect width="1200" height="630" fill="url(#glow-cyan)"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="1152" height="582" rx="16" stroke="#27272A" stroke-width="1.5" fill="none"/>
+
+  <!-- Brand Mark Icon Box (Left / 8 / Logo) -->
+  <g transform="translate(90, 80)">
+    <rect width="110" height="54" rx="12" fill="#111113" stroke="#27272A" stroke-width="1.5"/>
+    <!-- Slash 1 -->
+    <path d="M 22 41 L 33 13" stroke="url(#logo-slash)" stroke-width="5" stroke-linecap="round"/>
+    <!-- Clover 8 -->
+    <g transform="translate(43, 11) scale(0.062)">
+      <path d="M 256 256 C 210 200 130 200 130 256 C 130 312 210 312 256 256 C 302 200 382 200 382 256 C 382 312 302 312 256 256 Z" stroke="url(#logo-clover)" stroke-width="56" fill="none" stroke-linecap="round"/>
+      <path d="M 256 256 C 200 210 200 130 256 130 C 312 130 312 210 256 256 C 200 302 200 382 256 382 C 312 382 312 302 256 256 Z" stroke="url(#logo-clover)" stroke-width="56" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- Slash 2 -->
+    <path d="M 77 41 L 88 13" stroke="url(#logo-slash)" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Wordmark & Pill -->
+  <g transform="translate(220, 80)">
+    <text x="0" y="38" font-family="'JetBrains Mono', monospace" font-size="30" font-weight="800" fill="#FAFAFA" letter-spacing="-0.02em">5GOOS</text>
+    <rect x="110" y="16" width="68" height="26" rx="6" fill="#A855F7" fill-opacity="0.12" stroke="#A855F7" stroke-opacity="0.3"/>
+    <text x="120" y="33" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#C084FC">GOOSS</text>
+  </g>
+
+  <!-- Live Status Pill -->
+  <g transform="translate(890, 86)">
+    <rect width="220" height="34" rx="17" fill="#111113" stroke="#27272A" stroke-width="1"/>
+    <circle cx="18" cy="17" r="4" fill="#10B981"/>
+    <circle cx="18" cy="17" r="8" stroke="#10B981" stroke-opacity="0.3" stroke-width="1.5"/>
+    <text x="34" y="21.5" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#10B981" letter-spacing="0.05em">SYSTEMS OPERATIONAL</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="90" y="235" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="#FAFAFA" letter-spacing="-0.03em">Global Observability &amp; Operations</text>
+  <text x="90" y="295" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="44" font-weight="800" fill="url(#brand-text)" letter-spacing="-0.03em">Software Solutions (GOOSS)</text>
+
+  <!-- Subheadline -->
+  <text x="90" y="365" font-family="Inter, system-ui, -apple-system, sans-serif" font-size="20" font-weight="400" fill="#A1A1AA">
+    Focused open-source tooling for modern cloud operations.
+  </text>
+
+  <!-- Flagship Feature Card: BotoView Only -->
+  <g transform="translate(90, 430)">
+    <rect width="1020" height="110" rx="14" fill="#111113" stroke="#27272A" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="6" fill="#06B6D4"/>
+    <text x="56" y="42" font-family="Inter, sans-serif" font-size="18" font-weight="700" fill="#FAFAFA">BotoView — Interactive Web Application</text>
+    <rect x="440" y="26" width="100" height="22" rx="4" fill="#06B6D4" fill-opacity="0.12" stroke="#06B6D4" stroke-opacity="0.3"/>
+    <text x="448" y="41" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" fill="#38BDF8">OPEN SOURCE</text>
+    <text x="36" y="80" font-family="Inter, sans-serif" font-size="14" fill="#A1A1AA">
+      The modern, lightning-fast AWS Boto3 &amp; Botocore changelog explorer, release tracker, and service timeline.
+    </text>
+    <text x="860" y="42" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="600" fill="#06B6D4">botoview.5goos.com ↗</text>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+# 5GOOS — Global Observability & Operations Software Solutions (GOOSS)
+
+> Global Observability & Operations Software Solutions (GOOSS) for Modern Infrastructure.
+> In 5GOOS, the '5' represents Solutions (5 ⇄ S), paired with GOOS to form GOOSS (Global Observability & Operations Software Solutions).
+
+## Organization Overview
+- **Name:** 5GOOS (Global Observability & Operations Software Solutions — GOOSS)
+- **Website:** https://5goos.com
+- **GitHub:** https://github.com/5goos
+- **Primary Contact:** 5goos@proton.me
+- **Target Audience:** Cloud engineers, developers, and platform teams working with AWS.
+
+## Core Mission & Approach
+5GOOS builds focused open-source web tools and utilities for modern cloud and infrastructure workflows without bloated interfaces, email gates, or telemetry tracking.
+
+## Flagship Open-Source Project: BotoView
+
+- **Live Web Application:** https://botoview.5goos.com
+- **Repository:** https://github.com/5goos/botoview
+- **Category:** Cloud Tooling / AWS SDK
+- **Description:** The modern, lightning-fast AWS Boto3 & Botocore changelog explorer, release tracker, and service timeline. An interactive web application to track, filter, and explore AWS Boto3 changelogs, new AWS service additions, and API modifications.
+- **Licensing:** Open Source
+
+## Contact & Links
+- Web: https://5goos.com
+- Email: 5goos@proton.me
+- GitHub: https://github.com/5goos
+- BotoView: https://botoview.5goos.com

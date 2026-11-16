@@ -1,0 +1,23 @@
+{
+  "name": "5goos",
+  "version": "1.0.0",
+  "description": "5GOOS — Global Observability & Operations Software Solutions",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "check": "tsc --noEmit",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.5",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.12",
+    "tailwindcss": "^4.3.5"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
+}

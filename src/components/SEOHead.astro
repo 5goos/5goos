@@ -1,0 +1,124 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+}
+
+const {
+  title = '5GOOS — Global Observability & Operations Software Solutions (GOOSS)',
+  description = '5GOOS (GOOSS) builds focused open-source tools for modern cloud operations. Discover BotoView, the lightning-fast AWS Boto3 & Botocore changelog explorer.',
+  canonical = 'https://5goos.com',
+  ogImage = 'https://5goos.com/og-image.svg',
+  ogType = 'website',
+} = Astro.props;
+
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': 'https://5goos.com/#organization',
+      'name': '5GOOS',
+      'alternateName': 'Global Observability & Operations Software Solutions (GOOSS)',
+      'url': 'https://5goos.com',
+      'logo': {
+        '@type': 'ImageObject',
+        '@id': 'https://5goos.com/#logo',
+        'url': 'https://5goos.com/logo-dark.png',
+        'caption': '5GOOS Logo'
+      },
+      'image': 'https://5goos.com/og-image.svg',
+      'description': '5GOOS (GOOSS) builds focused open-source tools for modern cloud operations.',
+      'email': '5goos@proton.me',
+      'sameAs': [
+        'https://github.com/5goos'
+      ],
+      'knowsAbout': [
+        'AWS Cloud Operations',
+        'AWS Boto3 & Botocore',
+        'BotoView',
+        'Open Source Software'
+      ]
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://5goos.com/#website',
+      'url': 'https://5goos.com',
+      'name': '5GOOS',
+      'alternateName': 'GOOSS',
+      'description': 'Global Observability & Operations Software Solutions (GOOSS) for Modern Infrastructure',
+      'publisher': {
+        '@id': 'https://5goos.com/#organization'
+      },
+      'inLanguage': 'en-US'
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://botoview.5goos.com/#software',
+      'name': 'BotoView',
+      'operatingSystem': 'Web Browser',
+      'applicationCategory': 'WebApplication',
+      'url': 'https://botoview.5goos.com',
+      'description': 'The modern, lightning-fast AWS Boto3 & Botocore changelog explorer, release tracker, and service timeline.',
+      'author': {
+        '@id': 'https://5goos.com/#organization'
+      },
+      'offers': {
+        '@type': 'Offer',
+        'price': '0',
+        'priceCurrency': 'USD'
+      },
+      'isAccessibleForFree': true,
+      'softwareRequirements': 'Web Browser'
+    }
+  ]
+};
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-dark.png" media="(prefers-color-scheme: dark)" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-light.png" media="(prefers-color-scheme: light)" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="color-scheme" content="light dark" />
+
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<meta property="og:site_name" content="5GOOS (GOOSS)" />
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonical} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="5GOOS — Global Observability & Operations Software Solutions (GOOSS)" />
+<meta property="og:locale" content="en_US" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@5goos_ops" />
+<meta name="twitter:creator" content="@5goos_ops" />
+<meta name="twitter:url" content={canonical} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content="5GOOS — Global Observability & Operations Software Solutions (GOOSS)" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+/>
+
+<script type="application/ld+json" set:html={JSON.stringify(schemaData, null, 2)} />

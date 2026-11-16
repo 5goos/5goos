@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="g-light" x1="256" y1="60" x2="256" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ab10d8" />
+      <stop offset="50%" stop-color="#592bc2" />
+      <stop offset="100%" stop-color="#004aad" />
+    </linearGradient>
+    <linearGradient id="g-dark" x1="256" y1="60" x2="256" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#d946ef" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+  <style>
+    .symbol { stroke-width: 38; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+    @media (prefers-color-scheme: light) {
+      .symbol { stroke: url(#g-light); }
+    }
+    @media (prefers-color-scheme: dark) {
+      .symbol { stroke: url(#g-dark); }
+    }
+  </style>
+  <!-- Clover Infinity Symbol -->
+  <path class="symbol" d="M 256 256 C 210 200 130 200 130 256 C 130 312 210 312 256 256 C 302 200 382 200 382 256 C 382 312 302 312 256 256 Z" />
+  <path class="symbol" d="M 256 256 C 200 210 200 130 256 130 C 312 130 312 210 256 256 C 200 302 200 382 256 382 C 312 382 312 302 256 256 Z" />
+</svg>
