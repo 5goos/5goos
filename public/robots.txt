@@ -1,5 +1,6 @@
 # robots.txt for https://5goos.com
-# 5GOOS — Global Observability & Operations Software Solutions
+# 5GOOS — Global Observability & Operations Software Solutions (GOOSS)
+# Founded by Naveen Thurimerla
 
 User-agent: *
 Allow: /
@@ -32,5 +33,6 @@ Allow: /
 # Host specification
 Host: https://5goos.com
 
-# XML Sitemap
+# XML Sitemaps
 Sitemap: https://5goos.com/sitemap-index.xml
+Sitemap: https://5goos.com/sitemap-0.xml

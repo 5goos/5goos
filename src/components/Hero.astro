@@ -2,45 +2,51 @@
 import { COMPANY_INFO } from '../data/projects';
 ---
 
-<section class="relative isolate overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28" aria-labelledby="hero-title">
+<section class="relative isolate overflow-hidden pt-4 sm:pt-6 lg:pt-8 pb-10 sm:pb-14" aria-labelledby="hero-title">
   <div class="pointer-events-none absolute inset-0 -z-10 bg-grid-pattern opacity-70"></div>
-  <div class="pointer-events-none absolute top-1/3 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] sm:h-[650px] sm:w-[650px] rounded-full bg-radial from-purple-500/10 via-cyan-500/6 to-transparent blur-3xl"></div>
+  <div class="pointer-events-none absolute top-1/3 left-1/2 -z-10 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] sm:h-[480px] sm:w-[480px] rounded-full bg-radial from-purple-500/10 via-cyan-500/6 to-transparent blur-3xl"></div>
 
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center text-center">
       
       <h1
         id="hero-title"
-        class="max-w-4xl text-balance text-4xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-6xl sm:leading-[1.15]"
+        class="max-w-2xl lg:max-w-3xl text-balance text-xl sm:text-2xl md:text-3xl lg:text-[2.25rem] font-extrabold tracking-tight text-[var(--text-primary)] leading-snug sm:leading-tight"
       >
         Global Observability &amp; Operations Software Solutions <span class="bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-500 bg-clip-text text-transparent font-mono font-bold">(GOOSS)</span> for Modern Infrastructure
       </h1>
 
-      <p class="mt-6 max-w-2xl text-balance text-base text-[var(--text-secondary)] sm:text-lg sm:leading-relaxed">
-        5GOOS builds focused open-source tooling for modern cloud operations.
-      </p>
-
       <div
         id="anim-stage"
-        class="mt-10 w-full max-w-md rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-5 sm:p-7 backdrop-blur-xl shadow-xl relative overflow-hidden select-none transition-all duration-300 hover:border-[var(--border-hover)]"
+        class="mt-5 sm:mt-7 w-full max-w-md rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-3.5 sm:p-4 backdrop-blur-xl shadow-2xl relative overflow-hidden select-none transition-all duration-300 hover:border-[var(--border-hover)]"
       >
-        <div class="pointer-events-none absolute -top-12 left-1/2 -translate-x-1/2 h-32 w-32 rounded-full bg-cyan-500/10 blur-2xl"></div>
+        <span class="pointer-events-none absolute top-2.5 left-2.5 font-mono text-[10px] text-purple-400/40 select-none">⌜</span>
+        <span class="pointer-events-none absolute top-2.5 right-2.5 font-mono text-[10px] text-cyan-400/40 select-none">⌝</span>
+        <span class="pointer-events-none absolute bottom-2.5 left-2.5 font-mono text-[10px] text-purple-400/40 select-none">⌞</span>
+        <span class="pointer-events-none absolute bottom-2.5 right-2.5 font-mono text-[10px] text-cyan-400/40 select-none">⌟</span>
 
-        <div class="flex items-center justify-between pb-4 border-b border-[var(--border-subtle)]">
+        <div class="pointer-events-none absolute inset-0 flex items-center justify-center -z-0">
+          <div
+            id="ambient-aura"
+            class="h-28 w-56 rounded-full bg-purple-500/20 blur-3xl transition-all duration-700 ease-out"
+          ></div>
+        </div>
+
+        <div class="relative z-10 flex items-center justify-center pb-3 border-b border-[var(--border-subtle)]">
           <div class="inline-flex rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] p-1 text-xs font-mono">
             <button
               type="button"
               id="tab-5goos"
-              class="rounded-md px-3 py-1 font-semibold transition-all duration-200 bg-[var(--bg-surface)] text-purple-600 dark:text-purple-400 shadow-sm"
-              aria-label="View 5GOOS brand identity"
+              class="rounded-md px-3.5 py-1 font-semibold transition-all duration-200 text-white bg-gradient-to-r from-purple-600 to-indigo-600 shadow-[0_0_12px_rgba(168,85,247,0.4)]"
+              aria-label="Toggle 5GOOS"
             >
               5GOOS
             </button>
             <button
               type="button"
               id="tab-gooss"
-              class="rounded-md px-3 py-1 font-medium transition-all duration-200 text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
-              aria-label="View GOOSS acronym identity"
+              class="rounded-md px-3.5 py-1 font-medium transition-all duration-200 text-[var(--text-tertiary)] hover:text-[var(--text-primary)]"
+              aria-label="Toggle GOOSS"
             >
               GOOSS
             </button>
@@ -49,26 +55,41 @@ import { COMPANY_INFO } from '../data/projects';
           <button
             type="button"
             id="anim-toggle-btn"
-            class="text-[11px] font-mono text-[var(--text-tertiary)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5 px-2 py-1 rounded bg-[var(--bg-canvas)] border border-[var(--border-subtle)]"
-            title="Toggle state"
+            class="absolute right-0 group flex h-8 w-8 items-center justify-center rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] text-[var(--text-tertiary)] transition-all hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95"
+            aria-label="Toggle animation cycle"
+            title="Cycle animation"
           >
-            <span>transform</span>
-            <span class="text-cyan-500">⇄</span>
+            <svg
+              id="cycle-icon"
+              class="h-4 w-4 transition-transform duration-500 ease-out group-hover:rotate-180 text-purple-400 group-hover:text-cyan-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+              <path d="M3 3v5h5" />
+              <path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16" />
+              <path d="M16 21h5v-5" />
+            </svg>
           </button>
         </div>
 
-        <div class="py-8 sm:py-10 flex flex-col items-center justify-center">
+        <div class="relative z-10 py-6 sm:py-7 flex flex-col items-center justify-center text-center">
           <div
             id="wordmark-box"
-            class="relative w-[5ch] h-[1.3em] font-mono font-black text-5xl sm:text-6xl md:text-7xl leading-none tracking-normal select-none overflow-visible"
+            class="relative w-[5ch] h-[1.3em] font-mono font-black text-4xl sm:text-5xl md:text-6xl leading-none tracking-normal select-none overflow-visible mx-auto"
+            style="perspective: 600px;"
           >
             <div
               id="traveler-slot"
-              class="absolute top-0 left-0 w-[1ch] h-full flex items-center justify-center transition-transform duration-400 ease-out transform-gpu will-change-transform z-10"
+              class="absolute top-0 left-0 w-[1ch] h-full flex items-center justify-center transition-transform duration-400 cubic-bezier(0.34, 1.4, 0.64, 1) transform-gpu will-change-transform z-10"
             >
               <span
                 id="traveler-char"
-                class="inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]"
+                class="inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_20px_rgba(168,85,247,0.7)] font-black"
               >
                 5
               </span>
@@ -82,17 +103,16 @@ import { COMPANY_INFO } from '../data/projects';
             </div>
           </div>
 
-          <div class="mt-6 h-5 flex items-center justify-center">
-            <span
-              id="identity-label"
-              class="font-mono text-xs font-medium text-[var(--text-secondary)] transition-opacity duration-200"
-            >
-              Brand Identity
-            </span>
+          <div class="mt-4 flex items-center justify-center gap-1.5" aria-hidden="true">
+            <span id="dot-0" class="h-1 w-4 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-300"></span>
+            <span id="dot-1" class="h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300"></span>
+            <span id="dot-2" class="h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300"></span>
+            <span id="dot-3" class="h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300"></span>
+            <span id="dot-4" class="h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300"></span>
           </div>
         </div>
 
-        <div class="absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400 w-full opacity-60"></div>
+        <div class="absolute bottom-0 left-0 h-[2px] bg-gradient-to-r from-purple-500 via-indigo-500 to-cyan-400 w-full opacity-70"></div>
       </div>
 
     </div>
@@ -103,82 +123,93 @@ import { COMPANY_INFO } from '../data/projects';
   const tab5goos = document.getElementById('tab-5goos');
   const tabGooss = document.getElementById('tab-gooss');
   const toggleBtn = document.getElementById('anim-toggle-btn');
+  const cycleIcon = document.getElementById('cycle-icon');
   const travelerSlot = document.getElementById('traveler-slot');
   const travelerChar = document.getElementById('traveler-char');
   const coreGoos = document.getElementById('core-goos');
-  const identityLabel = document.getElementById('identity-label');
+  const ambientAura = document.getElementById('ambient-aura');
+  const dot0 = document.getElementById('dot-0');
+  const dot4 = document.getElementById('dot-4');
 
   let isGoossState = false;
   let autoCycleTimer: NodeJS.Timeout | null = null;
+  let iconRotation = 0;
 
   function applyState(toGooss: boolean) {
     isGoossState = toGooss;
     if (!travelerSlot || !travelerChar || !coreGoos) return;
 
+    iconRotation += 180;
+    if (cycleIcon) {
+      cycleIcon.style.transform = `rotate(${iconRotation}deg)`;
+    }
+
     if (toGooss) {
       travelerSlot.style.transform = 'translate3d(4ch, 0, 0)';
       coreGoos.style.transform = 'translate3d(-1ch, 0, 0)';
 
+      if (ambientAura) {
+        ambientAura.className = 'h-28 w-56 rounded-full bg-cyan-500/20 blur-3xl transition-all duration-700 ease-out';
+      }
+
+      if (dot0 && dot4) {
+        dot0.className = 'h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300';
+        dot4.className = 'h-1 w-4 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)] transition-all duration-300';
+      }
+
       setTimeout(() => {
-        travelerChar.style.transform = 'rotateY(90deg)';
+        travelerChar.style.transform = 'rotateY(90deg) scale(1.15)';
         travelerChar.style.opacity = '0.3';
 
         setTimeout(() => {
           travelerChar.textContent = 'S';
           travelerChar.className =
-            'inline-flex items-center justify-center transition-all duration-200 text-cyan-600 dark:text-cyan-300 drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] font-black';
-          travelerChar.style.transform = 'rotateY(0deg)';
+            'inline-flex items-center justify-center transition-all duration-200 text-cyan-600 dark:text-cyan-300 drop-shadow-[0_0_22px_rgba(6,182,212,0.85)] font-black';
+          travelerChar.style.transform = 'rotateY(0deg) scale(1)';
           travelerChar.style.opacity = '1';
 
           coreGoos.className =
-            'absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-cyan-600 dark:text-cyan-300 drop-shadow-[0_0_15px_rgba(6,182,212,0.3)]';
+            'absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-cyan-500 dark:text-cyan-200 drop-shadow-[0_0_12px_rgba(6,182,212,0.3)]';
         }, 80);
-      }, 180);
+      }, 160);
 
-      tabGooss?.classList.add('bg-[var(--bg-surface)]', 'text-cyan-600', 'dark:text-cyan-400', 'shadow-sm');
+      tabGooss?.classList.add('bg-gradient-to-r', 'from-cyan-600', 'to-indigo-600', 'text-white', 'shadow-[0_0_12px_rgba(6,182,212,0.4)]');
       tabGooss?.classList.remove('text-[var(--text-tertiary)]');
-      tab5goos?.classList.remove('bg-[var(--bg-surface)]', 'text-purple-600', 'dark:text-purple-400', 'shadow-sm');
+      tab5goos?.classList.remove('bg-gradient-to-r', 'from-purple-600', 'to-indigo-600', 'text-white', 'shadow-[0_0_12px_rgba(168,85,247,0.4)]');
       tab5goos?.classList.add('text-[var(--text-tertiary)]');
-
-      if (identityLabel) {
-        identityLabel.style.opacity = '0';
-        setTimeout(() => {
-          identityLabel.textContent = 'Global Observability & Operations Software Solutions';
-          identityLabel.style.opacity = '1';
-        }, 100);
-      }
     } else {
       travelerSlot.style.transform = 'translate3d(0, 0, 0)';
       coreGoos.style.transform = 'translate3d(0, 0, 0)';
 
+      if (ambientAura) {
+        ambientAura.className = 'h-28 w-56 rounded-full bg-purple-500/20 blur-3xl transition-all duration-700 ease-out';
+      }
+
+      if (dot0 && dot4) {
+        dot4.className = 'h-1 w-1.5 rounded-full bg-[var(--border-subtle)] transition-all duration-300';
+        dot0.className = 'h-1 w-4 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)] transition-all duration-300';
+      }
+
       setTimeout(() => {
-        travelerChar.style.transform = 'rotateY(90deg)';
+        travelerChar.style.transform = 'rotateY(90deg) scale(1.15)';
         travelerChar.style.opacity = '0.3';
 
         setTimeout(() => {
           travelerChar.textContent = '5';
           travelerChar.className =
-            'inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.4)]';
-          travelerChar.style.transform = 'rotateY(0deg)';
+            'inline-flex items-center justify-center transition-all duration-200 text-purple-600 dark:text-purple-400 drop-shadow-[0_0_20px_rgba(168,85,247,0.7)] font-black';
+          travelerChar.style.transform = 'rotateY(0deg) scale(1)';
           travelerChar.style.opacity = '1';
 
           coreGoos.className =
             'absolute top-0 left-[1ch] w-[4ch] h-full flex items-center justify-start transition-all duration-400 ease-out transform-gpu will-change-transform text-[var(--text-primary)]';
         }, 80);
-      }, 180);
+      }, 160);
 
-      tab5goos?.classList.add('bg-[var(--bg-surface)]', 'text-purple-600', 'dark:text-purple-400', 'shadow-sm');
+      tab5goos?.classList.add('bg-gradient-to-r', 'from-purple-600', 'to-indigo-600', 'text-white', 'shadow-[0_0_12px_rgba(168,85,247,0.4)]');
       tab5goos?.classList.remove('text-[var(--text-tertiary)]');
-      tabGooss?.classList.remove('bg-[var(--bg-surface)]', 'text-cyan-600', 'dark:text-cyan-400', 'shadow-sm');
+      tabGooss?.classList.remove('bg-gradient-to-r', 'from-cyan-600', 'to-indigo-600', 'text-white', 'shadow-[0_0_12px_rgba(6,182,212,0.4)]');
       tabGooss?.classList.add('text-[var(--text-tertiary)]');
-
-      if (identityLabel) {
-        identityLabel.style.opacity = '0';
-        setTimeout(() => {
-          identityLabel.textContent = 'Brand Identity';
-          identityLabel.style.opacity = '1';
-        }, 100);
-      }
     }
   }
 

@@ -55,7 +55,13 @@ export const COMPANY_INFO = {
   domain: 'https://5goos.com',
   email: '5goos@proton.me',
   github: 'https://github.com/5goos',
-  twitter: '@5goos_ops',
+  founder: {
+    name: 'Naveen Thurimerla',
+    role: 'Founder & Principal Infrastructure Engineer',
+    github: 'https://github.com/na8t',
+    website: 'https://www.thurimerla.com',
+    url: 'https://www.thurimerla.com'
+  },
   flagship: {
     name: 'BotoView',
     url: 'https://botoview.5goos.com',

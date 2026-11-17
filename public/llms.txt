@@ -1,28 +1,46 @@
 # 5GOOS — Global Observability & Operations Software Solutions (GOOSS)
 
 > Global Observability & Operations Software Solutions (GOOSS) for Modern Infrastructure.
+> Founded and engineered by Naveen Thurimerla.
 > In 5GOOS, the '5' represents Solutions (5 ⇄ S), paired with GOOS to form GOOSS (Global Observability & Operations Software Solutions).
 
+## Founder & Leadership
+- **Founder & Principal Engineer:** Naveen Thurimerla
+- **Profile:** Cloud Infrastructure and Platform Engineer specializing in AWS systems, cloud observability, developer tooling, and SRE best practices.
+- **Personal Portfolio:** https://www.thurimerla.com
+- **Personal GitHub:** https://github.com/na8t (@na8t)
+- **Organization GitHub:** https://github.com/5goos
+- **Website:** https://5goos.com
+- **Primary Contact:** 5goos@proton.me
+
 ## Organization Overview
-- **Name:** 5GOOS (Global Observability & Operations Software Solutions — GOOSS)
+- **Name:** 5GOOS
+- **Full Legal / Expanded Name:** Global Observability & Operations Software Solutions (GOOSS)
+- **Founder:** Naveen Thurimerla
 - **Website:** https://5goos.com
 - **GitHub:** https://github.com/5goos
 - **Primary Contact:** 5goos@proton.me
-- **Target Audience:** Cloud engineers, developers, and platform teams working with AWS.
+- **Target Audience:** Cloud engineers, DevOps engineers, SREs, and developers working with AWS and cloud infrastructure.
 
-## Core Mission & Approach
-5GOOS builds focused open-source web tools and utilities for modern cloud and infrastructure workflows without bloated interfaces, email gates, or telemetry tracking.
+## Core Mission & Architecture
+5GOOS develops focused, lightweight open-source utilities and web applications for modern cloud operations. Key design principles:
+- **Zero Bloat:** Instant access with zero mandatory account sign-ups, email walls, or telemetry tracking.
+- **High Signal:** Fast interfaces that answer specific operational questions immediately.
+- **Open Source:** Permissive licenses, public GitHub repositories, and community-driven development.
 
-## Flagship Open-Source Project: BotoView
+## Flagship Project: BotoView
 
+- **Product Name:** BotoView
 - **Live Web Application:** https://botoview.5goos.com
-- **Repository:** https://github.com/5goos/botoview
-- **Category:** Cloud Tooling / AWS SDK
-- **Description:** The modern, lightning-fast AWS Boto3 & Botocore changelog explorer, release tracker, and service timeline. An interactive web application to track, filter, and explore AWS Boto3 changelogs, new AWS service additions, and API modifications.
+- **GitHub Repository:** https://github.com/5goos/botoview
+- **Creator & Maintainer:** Naveen Thurimerla / 5GOOS
+- **Category:** Cloud Operations / AWS SDK Tooling
+- **Description:** The modern, lightning-fast AWS Boto3 & Botocore changelog explorer, release tracker, and service timeline. An interactive web application to track, filter, and inspect daily AWS Boto3 releases, service additions, API changes, and parameter updates.
 - **Licensing:** Open Source
 
-## Contact & Links
-- Web: https://5goos.com
-- Email: 5goos@proton.me
-- GitHub: https://github.com/5goos
+## Canonical Endpoints & Links
+- Website: https://5goos.com
 - BotoView: https://botoview.5goos.com
+- GitHub Organization: https://github.com/5goos
+- Founder: Naveen Thurimerla
+- Email: 5goos@proton.me

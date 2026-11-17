@@ -1,4 +1,5 @@
 ---
+import { COMPANY_INFO } from '../data/projects';
 ---
 
 <section id="about" class="relative py-20 sm:py-28 border-t border-[var(--border-subtle)]" aria-labelledby="about-title">
@@ -35,6 +36,55 @@
         <p class="mt-2 text-sm text-[var(--text-secondary)] leading-relaxed">
           Public repositories, permissive open-source licenses, and transparent issue tracking for developer community collaboration.
         </p>
+      </div>
+    </div>
+
+    <div
+      class="mt-8 rounded-2xl border border-[var(--border-subtle)] bg-[var(--bg-surface)] p-6 sm:p-8 transition-all duration-200 hover:border-[var(--border-hover)] relative overflow-hidden"
+      itemscope
+      itemtype="https://schema.org/Person"
+    >
+      <div class="pointer-events-none absolute -top-20 -right-20 h-48 w-48 rounded-full bg-purple-500/10 blur-3xl" aria-hidden="true"></div>
+
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+        <div class="space-y-3 max-w-2xl">
+          <div class="inline-flex items-center gap-2 font-mono text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+            <span>// LEADERSHIP &amp; ENGINEERING</span>
+          </div>
+          <h3 class="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text-primary)]">
+            Founded by <span itemprop="name">Naveen Thurimerla</span>
+          </h3>
+          <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+            <span itemprop="worksFor" itemscope itemtype="https://schema.org/Organization"><span itemprop="name">5GOOS</span></span> was founded by <strong class="text-[var(--text-primary)] font-medium">Naveen Thurimerla</strong>, an infrastructure engineer focused on eliminating friction in cloud operations. Guided by the philosophy of high signal and zero operational overhead, Naveen leads the architecture and development of 5GOOS initiatives, including flagship open-source utilities like BotoView.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap md:flex-col gap-2.5 shrink-0 font-mono text-xs">
+          <div class="rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] px-3 py-2 text-[var(--text-secondary)]">
+            <span class="block text-[10px] uppercase text-[var(--text-tertiary)] font-sans">Role</span>
+            <span itemprop="jobTitle" class="text-[var(--text-primary)] font-medium">Founder &amp; Principal Engineer</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <a
+              href="https://www.thurimerla.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              itemprop="url"
+              class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] px-3 py-2 text-[var(--text-primary)] hover:border-purple-500/50 hover:bg-[var(--bg-surface-elevated)] transition-colors"
+            >
+              <span>thurimerla.com ↗</span>
+            </a>
+            <a
+              href={COMPANY_INFO.founder.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              itemprop="sameAs"
+              class="inline-flex items-center justify-center gap-1.5 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-canvas)] px-3 py-2 text-[var(--text-primary)] hover:border-[var(--border-hover)] hover:bg-[var(--bg-surface-elevated)] transition-colors"
+            >
+              <span>@na8t ↗</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
